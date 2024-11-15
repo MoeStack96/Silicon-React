@@ -12,6 +12,10 @@ const Header = () => {
                 <a className="nav-link" href="#">Features</a>
             </nav>
 
+            <nav id="contact-menu" className="navbar">
+                <a className="nav-link" href="#">Contact</a>
+            </nav>
+
             <div id="darkmode-toggle-switch" className="btn-toggle-switch">
                 <span className="label">Dark Mode</span>
                 <label for="dark-mode-switch" className="toggle-switch">

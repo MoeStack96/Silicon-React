@@ -1,8 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Notifacation from '../assets/images/notification-icon.svg'
 import Email from '../assets/images/email-icon.svg'
 
 function Subscribe() {
+
+  const [email, setEmail] = useState('');
+  const [error, setError] = useState('');
+
+  const handleSub = () => {
+
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setError('Please enter a valid email address.');
+      return;
+    }
+
+    alert('You are subscribed!');
+    setError('');
+  };
+
+  const handleChange = (event) => {
+    setEmail(event.target.value);
+    setError(''); 
+  };
+
+
   return (
     
     <section id="subscribe">
@@ -15,9 +37,17 @@ function Subscribe() {
             </div>
 
             <div className="input-group">
-                <img src={Email} alt=""/>
-                <input className="form-group" type="text" placeholder="Your Email"/>
-                <button>Subscribe</button>
+              <img src={Email} alt="" />
+              <input
+                className="form-group"
+                onChange={handleChange}
+                type="text"
+                placeholder="Your Email"
+                required
+                value={email}
+              />
+              {error && <p className="error">{error}</p>}
+              <button onClick={handleSub}>Subscribe</button>
             </div>
             
         </div>
