@@ -6,7 +6,9 @@
     --color-gray: #9397AD;
     --color-white: #fff;
 
+    --background-color: #f3f6ff;
     --color-border-grey:#E2E5F1;
+    --color-text-grey: #585C7B;
 
     --container-padding: 1rem;
     --transition-time: all 0.2s;
@@ -217,6 +219,156 @@ header .container {
     justify-content: center;
     align-items: center; 
 }
+
+
+.cursor-pointer {
+    cursor: pointer;
+  }
+  
+  .panel.open {
+    height: auto !important;
+  }
+  
+  .panel .answer p {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.6;
+    font-weight: 400 !important;
+  }
+  
+  /* Darkmode theme */
+  body.dark header {
+    background-color: #1b1f29;
+  }
+  body.dark #hero {
+    background-color: #0b0f19;
+  }
+  
+  body.dark .btn-toggle-switch .label,body.dark #hero .content .discover-more {
+    color: #565973;
+  }
+  
+  body.dark .content .discover-more .btn-circle{
+      border: none;
+      background-color: rgb(255 255 255 / 8%);
+      color: #ffffff;
+  }
+  
+  body.dark #hero .headline h1,
+  body.dark .nav-link {
+    color: #ffffff;
+  }
+  body.dark #hero .content p {
+    color: #ffffff;
+    opacity: 0.7;
+  }
+  
+  #hero .images {
+    position: relative;
+    z-index: 1;
+  }
+  body.dark .btn-app {
+    padding: 0px;
+  }
+  body.dark .btn-app{
+  background-color: transparent;
+  }
+  body.dark .btn-app img {
+    height: 60px;
+    width: 186px;
+  }
+  body.dark .btn-app:hover img {
+    opacity: .5;
+  }
+  
+  body.dark #brands,
+  body.dark #features{
+  background-color: #0b0f19;
+  }
+  
+  body.dark #slider{
+  background-color: #151822;
+  }
+  body.dark{
+      background-color: #0b0f19;
+      }
+  body.dark .bg-featuregrid{
+  background-color: #0b0f19;
+  }
+  
+  body.dark #testimonials{
+  background-color: #151822;
+  }
+  
+  body.dark #features h1, body.dark #features .features-list h3,body.dark #slider h1, 
+  body.dark #slider .desktop-h4,
+  body.dark #slider h4,
+  body.dark #feature-grid h2,
+  body.dark #testimonials .h2,
+  body.dark #testimonials .user-details h4,
+  body.dark #faq .title h2,
+  body.dark #faq .panel p,
+  body.dark #subscribe .title h4 
+   {
+  color: #ffffff;
+  }
+  
+  body.dark #features .paragraph, body.dark #features .features-list p,body.dark #slider .desktop-p,body.dark #feature-grid p,
+  body.dark #testimonials .testimonial p,
+  body.dark #faq .title p,
+  body.dark #faq .panel .answer p,
+  body.dark #faq .icon-box p
+  {
+  color: #ffffff;
+  opacity: .5;
+  }
+  
+  body.dark .bg-featuregrid #background,
+  body.dark .bg-featuregrid #second-background
+  {
+  z-index: 10 !important;
+  }
+  body.dark .bg-featuregrid #foreground{
+  z-index: 100 !important;
+  }
+  
+  body.dark #testimonials .testimonial{
+  background-color: #1e222b;
+  }
+  
+  body.dark #faq .panel{
+  background-color: #151822;
+  margin-bottom: 15px;
+  }
+  
+  body.dark #faq .panel p i{
+  background-color: #1e222b;
+  margin-top: -7px;
+  }
+  
+  body.dark #faq .panel.open p i{
+  background-color: var(--color-primary);
+  }
+  
+  body.dark #subscribe{
+  background-color: #151822;
+  
+  }
+  
+  a.discover-more,a#logo{
+  background: none !important;
+  }
+  
+  body.dark #faq .panel{
+  border: none;
+  }
+  
+  @media (max-width:767px) {
+      body.dark .btn-app {
+          background-color: #f3f6ff;
+      }
+  }
+  
 
 @media (min-width: 768px) {
     .container {
@@ -441,7 +593,7 @@ header .container {
  #features .paragraph {
     font-size: 18px;
     font-weight: 400;
-    color: #585C7B;
+    color: var(--color-text-grey);
     text-align: center;
     margin-bottom: 2rem;
 }
@@ -449,7 +601,7 @@ header .container {
 #features p {
     font-size: 16px;
     font-weight: 400;
-    color: #585C7B;
+    color: var(--color-text-grey);
     margin-bottom: 2rem;
 }
 
@@ -486,7 +638,7 @@ header .container {
 
 
 #slider {
-    background-color: #f3f6ff;
+    background-color: var(--background-color);
     padding: 2rem;
     padding-bottom: 6rem;   
 }
@@ -507,7 +659,7 @@ header .container {
 
 #slider p {
     text-align: center;
-    color: #585C7B;
+    color: var(--color-text-grey);
     max-width: 650px;
     margin: 0 auto;
 }       
@@ -642,7 +794,7 @@ header .container {
         .texts {
             display: flex;
             max-width: 600px;
-            color: #565973;
+            color: var(--color-text-grey);
             padding: 0rem 0;
         }
 
@@ -654,7 +806,7 @@ header .container {
 
         button {
             background-color: var(--color-primary);
-            color: #fff;
+            color: var(--color-white);
             padding: 10px 20px;
             margin-top: 2rem;
             border: none;
@@ -677,7 +829,7 @@ header .container {
         justify-content: center;
         align-items: center;
         height: 600px;
-        background-color: #f3f6ff;
+        background-color: var(--background-color);
     } 
     
     .testimonials {
@@ -701,7 +853,7 @@ header .container {
     }
     
     .testimonial {
-        background-color: #fff;
+        background-color: var(--color-white);
         border-radius: 8px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         padding: 20px;
@@ -920,10 +1072,6 @@ header .container {
             padding: 24px;
             width: 750px;
             height: 70px;
-        }
-
-        .panel.expanded {
-            height: 150px;
         }
 
         .panel p {

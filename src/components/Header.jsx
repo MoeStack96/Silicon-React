@@ -1,12 +1,28 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import Logo from '../assets/images/logo.svg'
+import LogoWhite from '../assets/images/logo_white.svg';
 
 const Header = () => {
+    const [isDarkMode, setIsDarkMode] = useState(() => localStorage.getItem('theme') === 'dark');
+
+
+    useEffect(() => {
+        const theme = isDarkMode ? 'dark' : 'light';
+        document.body.className = theme;
+        localStorage.setItem('theme', theme);
+      }, [isDarkMode]);
+    
+      const handleToggle = () => {
+        setIsDarkMode((prevMode) => !prevMode);
+      };
+
   return (
     <header>
         <div className="container">
 
-            <a href="index.html" id="logo"><img src={Logo} alt="Logo"/></a>
+            <a href="index.html" id="logo">
+                <img src={isDarkMode ? LogoWhite : Logo} alt="Logo"/>
+            </a>
 
             <nav id="main-menu" className="navbar">
                 <a className="nav-link" href="#">Features</a>
@@ -19,7 +35,12 @@ const Header = () => {
             <div id="darkmode-toggle-switch" className="btn-toggle-switch">
                 <span className="label">Dark Mode</span>
                 <label for="dark-mode-switch" className="toggle-switch">
-                    <input id="dark-mode-switch" type="checkbox"/>
+                    <input 
+                        id="dark-mode-switch" 
+                        type="checkbox" 
+                        checked={isDarkMode} 
+                        onChange={handleToggle}
+                        />
                     <span className="slider round"></span>
                 </label>
             </div>
