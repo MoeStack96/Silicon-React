@@ -1,5 +1,6 @@
 import "./assets/css/styles.css"
 import Brands from "./components/Brands"
+import Contact from "./components/Contact"
 import FAQ from "./components/FAQ"
 import FeatureGrid from "./components/FeatureGrid"
 import Features from "./components/Features"
@@ -23,8 +24,6 @@ function App() {
       <Testimonials/>
       <FAQ/>
       <Subscribe/>
-
-
       <Footer/>
     </>
   )
