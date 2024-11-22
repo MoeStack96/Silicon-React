@@ -222,153 +222,153 @@ header .container {
 
 
 .cursor-pointer {
-    cursor: pointer;
-  }
-  
-  .panel.open {
-    height: auto !important;
-  }
-  
-  .panel .answer p {
-    font-size: 14px;
-    color: #555;
-    line-height: 1.6;
-    font-weight: 400 !important;
-  }
-  
-  /* Darkmode theme */
-  body.dark header {
-    background-color: #1b1f29;
-  }
-  body.dark #hero {
-    background-color: #0b0f19;
-  }
-  
-  body.dark .btn-toggle-switch .label,body.dark #hero .content .discover-more {
-    color: #565973;
-  }
-  
-  body.dark .content .discover-more .btn-circle{
-      border: none;
-      background-color: rgb(255 255 255 / 8%);
-      color: #ffffff;
-  }
-  
-  body.dark #hero .headline h1,
-  body.dark .nav-link {
-    color: #ffffff;
-  }
-  body.dark #hero .content p {
-    color: #ffffff;
-    opacity: 0.7;
-  }
-  
-  #hero .images {
-    position: relative;
-    z-index: 1;
-  }
-  body.dark .btn-app {
-    padding: 0px;
-  }
-  body.dark .btn-app{
-  background-color: transparent;
-  }
-  body.dark .btn-app img {
-    height: 60px;
-    width: 186px;
-  }
-  body.dark .btn-app:hover img {
-    opacity: .5;
-  }
-  
-  body.dark #brands,
-  body.dark #features{
+  cursor: pointer;
+}
+
+.panel.open {
+  height: auto !important;
+}
+
+.panel .answer p {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  font-weight: 400 !important;
+}
+
+/* Darkmode theme */
+body.dark header {
+  background-color: #1b1f29;
+}
+body.dark #hero {
   background-color: #0b0f19;
-  }
-  
-  body.dark #slider{
-  background-color: #151822;
-  }
-  body.dark{
-      background-color: #0b0f19;
-      }
-  body.dark .bg-featuregrid{
-  background-color: #0b0f19;
-  }
-  
-  body.dark #testimonials{
-  background-color: #151822;
-  }
-  
-  body.dark #features h1, body.dark #features .features-list h3,body.dark #slider h1, 
-  body.dark #slider .desktop-h4,
-  body.dark #slider h4,
-  body.dark #feature-grid h2,
-  body.dark #testimonials .h2,
-  body.dark #testimonials .user-details h4,
-  body.dark #faq .title h2,
-  body.dark #faq .panel p,
-  body.dark #subscribe .title h4 
-   {
+}
+
+body.dark .btn-toggle-switch .label,body.dark #hero .content .discover-more {
+  color: #565973;
+}
+
+body.dark .content .discover-more .btn-circle{
+    border: none;
+    background-color: rgb(255 255 255 / 8%);
+    color: #ffffff;
+}
+
+body.dark #hero .headline h1,
+body.dark .nav-link {
   color: #ffffff;
-  }
-  
-  body.dark #features .paragraph, body.dark #features .features-list p,body.dark #slider .desktop-p,body.dark #feature-grid p,
-  body.dark #testimonials .testimonial p,
-  body.dark #faq .title p,
-  body.dark #faq .panel .answer p,
-  body.dark #faq .icon-box p
-  {
+}
+body.dark #hero .content p {
   color: #ffffff;
+  opacity: 0.7;
+}
+
+#hero .images {
+  position: relative;
+  z-index: 1;
+}
+body.dark .btn-app {
+  padding: 0px;
+}
+body.dark .btn-app{
+background-color: transparent;
+}
+body.dark .btn-app img {
+  height: 60px;
+  width: 186px;
+}
+body.dark .btn-app:hover img {
   opacity: .5;
-  }
-  
-  body.dark .bg-featuregrid #background,
-  body.dark .bg-featuregrid #second-background
-  {
-  z-index: 10 !important;
-  }
-  body.dark .bg-featuregrid #foreground{
-  z-index: 100 !important;
-  }
-  
-  body.dark #testimonials .testimonial{
-  background-color: #1e222b;
-  }
-  
-  body.dark #faq .panel{
-  background-color: #151822;
-  margin-bottom: 15px;
-  }
-  
-  body.dark #faq .panel p i{
-  background-color: #1e222b;
-  margin-top: -7px;
-  }
-  
-  body.dark #faq .panel.open p i{
-  background-color: var(--color-primary);
-  }
-  
-  body.dark #subscribe{
-  background-color: #151822;
-  
-  }
-  
-  a.discover-more,a#logo{
-  background: none !important;
-  }
-  
-  body.dark #faq .panel{
-  border: none;
-  }
-  
-  @media (max-width:767px) {
-      body.dark .btn-app {
-          background-color: #f3f6ff;
-      }
-  }
-  
+}
+
+body.dark #brands,
+body.dark #features{
+background-color: #0b0f19;
+}
+
+body.dark #slider{
+background-color: #151822;
+}
+body.dark{
+    background-color: #0b0f19;
+    }
+body.dark .bg-featuregrid{
+background-color: #0b0f19;
+}
+
+body.dark #testimonials{
+background-color: #151822;
+}
+
+body.dark #features h1, body.dark #features .features-list h3,body.dark #slider h1, 
+body.dark #slider .desktop-h4,
+body.dark #slider h4,
+body.dark #feature-grid h2,
+body.dark #testimonials .h2,
+body.dark #testimonials .user-details h4,
+body.dark #faq .title h2,
+body.dark #faq .panel p,
+body.dark #subscribe .title h4 
+ {
+color: #ffffff;
+}
+
+body.dark #features .paragraph, body.dark #features .features-list p,body.dark #slider .desktop-p,body.dark #feature-grid p,
+body.dark #testimonials .testimonial p,
+body.dark #faq .title p,
+body.dark #faq .panel .answer p,
+body.dark #faq .icon-box p
+{
+color: #ffffff;
+opacity: .5;
+}
+
+body.dark .bg-featuregrid #background,
+body.dark .bg-featuregrid #second-background
+{
+z-index: 10 !important;
+}
+body.dark .bg-featuregrid #foreground{
+z-index: 100 !important;
+}
+
+body.dark #testimonials .testimonial{
+background-color: #1e222b;
+}
+
+body.dark #faq .panel{
+background-color: #151822;
+margin-bottom: 15px;
+}
+
+body.dark #faq .panel p i{
+background-color: #1e222b;
+margin-top: -7px;
+}
+
+body.dark #faq .panel.open p i{
+background-color: var(--color-primary);
+}
+
+body.dark #subscribe{
+background-color: #151822;
+
+}
+
+a.discover-more,a#logo{
+background: none !important;
+}
+
+body.dark #faq .panel{
+border: none;
+}
+
+@media (max-width:767px) {
+    body.dark .btn-app {
+        background-color: #f3f6ff;
+    }
+}
+
 
 @media (min-width: 768px) {
     .container {
@@ -1196,7 +1196,8 @@ header .container {
     background-color: #F3F6FF;
 
     .container {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         justify-content: space-between;
         margin-left: 10rem;
         margin-right: 10rem;
@@ -1279,8 +1280,43 @@ header .container {
             padding: 13px 32px;
             margin-top: 6rem;
 
+        }   
+    }
+
+    .info, form, .map, .information {
+        margin-bottom: 6rem;
+    }
+
+    .information {
+
+        .place {
+            margin-left: 6rem;
+            margin-bottom: 3rem;
+        }
+
+        .title {
+            font-size: 24px;
+            font-weight: 900;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            padding: 5px;
         }
         
+        img {
+            padding-right: 4px;
+        }
+
+        .weekend {
+            margin-left: 1.4rem;
+        }
+
+        .socials img {
+            margin-right: 2rem;
+            margin-top: 4rem;
+        }
+
     }
 }
 

@@ -1,15 +1,39 @@
-import React from 'react'
+import {useEffect, useState} from 'react'
 import CallIcon from '../assets/images/call-icon.svg'
 import MessageIcon from '../assets/images/message-icon.svg'
 
 function FAQ() {
+    const [activeIndex, setActiveIndex] = useState(null);
+    const [faqsData, setFaqsData] = useState([]);
+
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const res = await fetch('https://win24-assignment.azurewebsites.net/api/faq');  
+                if (!res.ok) {
+                    throw new Error('Failed to fetch data');
+                }
+                const data = await res.json();
+                setFaqsData(data);
+            } catch (error) {
+                console.error('Error fetching FAQs:', error);
+            }
+        };
+
+        fetchData();
+
+    },[]);
+
+
+    const togglePanel = (index) => {
+        setActiveIndex(activeIndex === index ? null : index);
+    };
+
+
   return (
     <section id="faq">
-
         <div className="container">
-
             <div className="info">
-
                 <div className="title">
                     <h2>Any questions? Check out the FAQs</h2>
                     <p>Still have unanswered questions and need to get in touch?</p>
@@ -32,62 +56,29 @@ function FAQ() {
 
             </div>
 
-            
-
             <div className="accordion">
-
-                <div className="panel">
-                    <p>
-                        Is any of my personal information stored in the App?
-                        <i className="fa-regular fa-chevron-down"></i>
-                    </p>
-
-                    <div className="answer">
-                        
+            {faqsData.map((faq, index) => (
+                <div
+                    key={faq.id}
+                    className={`panel ${activeIndex === index ? 'open' : ''}`}
+                >
+                    <div className='cursor-pointer' onClick={() => togglePanel(index)}>
+                        <p>{faq.title}
+                        {activeIndex === index ? (
+                            <i className="fa-regular fa-chevron-up"></i>
+                        ) : (
+                            <i className="fa-regular fa-chevron-down"></i>
+                        )}
+                        </p>
                     </div>
+                    {activeIndex === index && (
+                        <div className="answer">
+                            <p>{faq.content}</p>
+                        </div>
+                    )}
                 </div>
-
-                <div className="panel">
-                    <p>
-                        Can I schedule future transfers?
-                        <i className="fa-regular fa-chevron-up"></i>
-                    </p>
-                </div>
-
-                <div className="panel open">
-                    <p>
-                        What formats can I download my transaction history in?
-                        <i className="fa-regular fa-chevron-down"></i>
-                    </p>
-
-                    <div className="answer">
-                        <p></p>
-                    </div>
-                    
-                </div>
-
-                <div className="panel">
-                    <p>
-                        When can I use Banking App services?
-                        <i className="fa-regular fa-chevron-down"></i>
-                    </p>
-                </div>
-
-                <div className="panel">
-                    <p>
-                        Can I create my own password that is easy for me to remember?
-                        <i className="fa-regular fa-chevron-down"></i>
-                    </p>
-                </div>
-
-                <div className="panel">
-                    <p>
-                        What happens if I forget or lose my password?
-                        <i className="fa-regular fa-chevron-down"></i>
-                    </p>
-                </div>
-
-            </div>
+            ))}
+        </div>
 
             <button>Contact us now</button>
 
