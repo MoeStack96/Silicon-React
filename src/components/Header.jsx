@@ -20,7 +20,7 @@ const Header = () => {
     <header>
         <div className="container">
 
-            <a href="index.html" id="logo">
+            <a href="/" id="logo">
                 <img src={isDarkMode ? LogoWhite : Logo} alt="Logo"/>
             </a>
 
@@ -29,7 +29,7 @@ const Header = () => {
             </nav>
 
             <nav id="contact-menu" className="navbar">
-                <a className="nav-link" href="#">Contact</a>
+                <a className="nav-link" href="/contact">Contact</a>
             </nav>
 
             <div id="darkmode-toggle-switch" className="btn-toggle-switch">
